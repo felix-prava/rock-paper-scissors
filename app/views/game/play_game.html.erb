@@ -1,0 +1,27 @@
+<div class="mx-auto max-w-7xl px-4 sm:px-2 lg:px-8 mt-10">
+  <div class="mx-auto max-w-xl">
+    <h3 class="text-5xl font-small leading-12 text-violet-800">ROCK - PAPER - SCISSORS</h3>
+    <div class="text-lg font-small leading-6 text-gray-500 mt-6">
+      Rock Paper Scissors is a zero sum game that is usually played by two people using their
+      hands and no tools. The idea is to make shapes with an outstretched hand where each shape
+      will have a certain degree of power and will lead to an outcome.
+    </div>
+    <h3 class="text-2xl font-big text-center leading-12 text-gray-900 mt-8">SELECT YOUR BET</h3>
+    <dl class="mt-5 grid grid-cols-3 gap-5 sm:grid-cols-3">
+      <div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow sm:p-6 mt-6">
+        <%= image_tag("rock.png") %>
+        <dt class="truncate text-sm font-medium ml-4 text-violet-800">Rock</dt>
+      </div>
+
+      <div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow sm:p-6">
+        <%= image_tag("paper.png") %>
+        <dt class="truncate text-sm font-medium ml-4 text-violet-800">Paper</dt>
+      </div>
+
+      <div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow sm:p-6">
+        <%= image_tag("scissors.png") %>
+        <dt class="truncate text-sm font-medium ml-2 text-violet-800">Scissors</dt>
+      </div>
+    </dl>
+  </div>
+</div>
