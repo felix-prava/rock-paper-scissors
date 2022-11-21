@@ -7,21 +7,22 @@
       will have a certain degree of power and will lead to an outcome.
     </div>
     <h3 class="text-2xl font-big text-center leading-12 text-gray-900 mt-8">SELECT YOUR BET</h3>
-    <dl class="mt-5 grid grid-cols-3 gap-5 sm:grid-cols-3">
-      <div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow sm:p-6 mt-6">
+    <dl class="mt-5 grid justify-items-center grid-cols-3 gap-5 sm:grid-cols-3">
+      <div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow hover:bg-slate-100 sm:p-6 mt-6">
         <%= image_tag("rock.png") %>
         <dt class="truncate text-sm font-medium ml-4 text-violet-800">Rock</dt>
       </div>
 
-      <div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow sm:p-6">
+      <div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow hover:bg-slate-100 sm:p-6">
         <%= image_tag("paper.png") %>
         <dt class="truncate text-sm font-medium ml-4 text-violet-800">Paper</dt>
       </div>
 
-      <div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow sm:p-6">
+      <div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow hover:bg-slate-100 sm:p-6">
         <%= image_tag("scissors.png") %>
         <dt class="truncate text-sm font-medium ml-2 text-violet-800">Scissors</dt>
       </div>
     </dl>
   </div>
+  <%= render partial: 'wait_game_response' %>
 </div>
