@@ -17,14 +17,14 @@
           <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
             <h3 class="text-2xl font-medium leading-6 text-center text-violet-800" id="modal-title">YOU WON!</h3>
             <div class="text-center mt-2">
-              <p class="text-sm text-gray-500">Curb with paper lost</p>
+              <p class="text-sm text-gray-500" id="opponent-result">Curb with paper lost</p>
             </div>
           </div>
         </div>
 
         <div class="grid grid-cols-3 gap-4 justify-items-center">
           <div class="col-start-2 col-span-1 overflow-hidden rounded-lg bg-white px-4 py-5 sm:p-6 mt-6">
-            <%= image_tag("rock.png") %>
+            <%= image_tag "rock.png", id: "game-results-image" %>
           </div>
         </div>
 

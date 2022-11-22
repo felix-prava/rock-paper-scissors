@@ -30,20 +30,32 @@
 
 <script type="text/javascript">
   function playGame(userChoice) {
-    console.log(userChoice);
-    document.getElementById("wait-curb-response").classList.remove("hidden");
+    imageSource = getImageSource(userChoice);
+    document.getElementById('waiting-game-response-image').src = imageSource;
+    document.getElementById('wait-curb-response').classList.remove('hidden');
 
     let xhr = new XMLHttpRequest();  
     let url = '/game/result?user_choice=' + userChoice;
-    xhr.open("GET", url);
+    xhr.open('GET', url);
   
     xhr.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
         res = JSON.parse(this.responseText)
-        console.log(this.responseText);
-        console.log(res["choice"]);
+        closeWaitingResponseModal();
+        document.getElementById('game-results-image').src = imageSource;
+        document.getElementById('modal-title').innerText = res['result'];
+        document.getElementById('opponent-result').textContent = res['opponent_result'];
+        document.getElementById('curb-result-div').classList.remove('hidden');
       }
     }
     xhr.send();   
+  }
+
+  function getImageSource(userChoice) {
+    if (userChoice === 'paper')
+        return "<%= asset_path('paper.png') %>";
+    if (userChoice === 'scissors')
+        return "<%= asset_path('scissors.png') %>";
+    return "<%= asset_path('rock.png') %>";
   }
 </script>
